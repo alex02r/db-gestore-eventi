@@ -4,3 +4,6 @@
 -- 2. Selezionare tutte le location in ordine alfabetico
     SELECT * FROM locations ORDER BY name ASC;
 
+-- 3. Selezionare tutti gli eventi che costano meno di 20 euro e durano meno di 3 ore
+    SELECT * FROM events WHERE price < 20 AND duration < '03:00:00';
+
