@@ -66,3 +66,9 @@
     GROUP BY locations.name
     ORDER BY num_events DESC;
 
+-- 17. Selezionare tutti gli utenti che si sono prenotati a più di 70 eventi
+    SELECT u.* FROM users u
+    JOIN bookings b ON u.id = b.user_id
+    GROUP BY u.id
+    HAVING COUNT(*) > 70;
+
