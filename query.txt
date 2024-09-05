@@ -10,3 +10,6 @@
 -- 4. Selezionare tutti gli eventi di dicembre 2023
     SELECT * FROM events WHERE MONTH(start) = 12 AND YEAR(start) = 2023;
 
+-- 5. Selezionare tutti gli eventi con una durata maggiore alle 2 ore
+SELECT * FROM events WHERE duration > '02:00:00';
+
