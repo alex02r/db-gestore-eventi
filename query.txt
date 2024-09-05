@@ -40,3 +40,9 @@
     JOIN events ON event_tag.event_id = events.id
     GROUP BY tags.name;
 
+-- 12. Selezionare tutte le location e mostrare quanti eventi si sono tenuti in ognuna
+    SELECT locations.name, COUNT(*) as num_events
+    FROM locations
+    JOIN events ON locations.id = events.location_id
+    GROUP BY locations.name;
+
