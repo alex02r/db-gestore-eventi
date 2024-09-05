@@ -56,3 +56,6 @@
     JOIN bookings ON users.id = bookings.user_id
     WHERE bookings.event_id = 2;
 
+-- 15. Selezionare tutti gli eventi sold out
+    SELECT * FROM events 
+    WHERE total_tickets = (SELECT COUNT(*) FROM bookings WHERE event_id = events.id);
