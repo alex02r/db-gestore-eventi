@@ -1,0 +1,2 @@
+-- 1. Selezionare tutti gli eventi gratis (prezzo nullo)
+    SELECT * FROM events WHERE price = 0;
