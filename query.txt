@@ -51,3 +51,8 @@
     JOIN bookings ON users.id = bookings.user_id
     WHERE bookings.event_id = 34;
 
+-- 14. Selezionare tutti i partecipanti all'evento "Festival Jazz Estivo" (slug: festival-jazz-estivo, id: 2) specificando nome e cognome
+    SELECT users.first_name, users.last_name FROM users
+    JOIN bookings ON users.id = bookings.user_id
+    WHERE bookings.event_id = 2;
+
