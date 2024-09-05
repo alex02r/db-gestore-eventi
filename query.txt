@@ -11,5 +11,7 @@
     SELECT * FROM events WHERE MONTH(start) = 12 AND YEAR(start) = 2023;
 
 -- 5. Selezionare tutti gli eventi con una durata maggiore alle 2 ore
-SELECT * FROM events WHERE duration > '02:00:00';
+    SELECT * FROM events WHERE duration > '02:00:00';
 
+-- 6. Selezionare tutti gli eventi con nome, data di inizio, ora di inizio, ora di fine e durata totale
+    SELECT name, DATE(start) AS start_date, TIME(start) AS start_time, TIME(DATE_ADD(start, INTERVAL TIME_TO_SEC(duration) SECOND)) AS end_time, duration FROM events;
