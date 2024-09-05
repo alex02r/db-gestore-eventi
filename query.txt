@@ -19,4 +19,6 @@
 -- 7. Selezionare tutti gli eventi aggiunti da "Fabiano Lombardo" (id: 1202)
     SELECT * FROM events WHERE user_id = 1202;
 
+-- 8. Selezionare il numero totale di eventi per ogni fascia di prezzo
+    SELECT price, COUNT(*) AS event_count FROM events GROUP BY price;
 
