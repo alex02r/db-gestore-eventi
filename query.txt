@@ -33,3 +33,10 @@
     JOIN tags ON tags.id = event_tag.tag_id 
     WHERE tags.name = 'concerti'
 
+-- 11. Selezionare tutti i tag e il prezzo medio degli eventi a loro collegati
+    SELECT tags.name, AVG(events.price) as average_price
+    FROM tags
+    JOIN event_tag ON tags.id = event_tag.tag_id
+    JOIN events ON event_tag.event_id = events.id
+    GROUP BY tags.name;
+
