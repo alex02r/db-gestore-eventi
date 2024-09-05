@@ -27,3 +27,9 @@
     JOIN roles ON roles.id = users.role_id
     WHERE roles.name LIKE 'admin' OR roles.name LIKE 'editor'
 
+-- 10. Selezionare tutti i concerti (eventi con il tag "concerti")
+    SELECT * FROM events 
+    JOIN event_tag ON event_tag.event_id = events.id 
+    JOIN tags ON tags.id = event_tag.tag_id 
+    WHERE tags.name = 'concerti'
+
