@@ -46,3 +46,8 @@
     JOIN events ON locations.id = events.location_id
     GROUP BY locations.name;
 
+-- 13. Selezionare tutti i partecipanti per l'evento "Concerto Classico Serale" (slug: concerto-classico-serale, id: 34)
+    SELECT users.id as num_participants FROM users 
+    JOIN bookings ON users.id = bookings.user_id
+    WHERE bookings.event_id = 34;
+
