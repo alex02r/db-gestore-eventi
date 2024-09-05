@@ -59,3 +59,10 @@
 -- 15. Selezionare tutti gli eventi sold out
     SELECT * FROM events 
     WHERE total_tickets = (SELECT COUNT(*) FROM bookings WHERE event_id = events.id);
+
+-- 16. Selezionare tutte le location in ordine per chi ha ospitato più eventi
+    SELECT locations.name, COUNT(*) as num_events FROM locations
+    JOIN events ON locations.id = events.location_id
+    GROUP BY locations.name
+    ORDER BY num_events DESC;
+
