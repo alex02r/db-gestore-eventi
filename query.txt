@@ -22,3 +22,8 @@
 -- 8. Selezionare il numero totale di eventi per ogni fascia di prezzo
     SELECT price, COUNT(*) AS event_count FROM events GROUP BY price;
 
+-- 9. Selezionare tutti gli utenti admin ed editor
+    SELECT * FROM users 
+    JOIN roles ON roles.id = users.role_id
+    WHERE roles.name LIKE 'admin' OR roles.name LIKE 'editor'
+
