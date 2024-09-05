@@ -7,3 +7,6 @@
 -- 3. Selezionare tutti gli eventi che costano meno di 20 euro e durano meno di 3 ore
     SELECT * FROM events WHERE price < 20 AND duration < '03:00:00';
 
+-- 4. Selezionare tutti gli eventi di dicembre 2023
+    SELECT * FROM events WHERE MONTH(start) = 12 AND YEAR(start) = 2023;
+
