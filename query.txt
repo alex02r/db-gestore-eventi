@@ -15,3 +15,8 @@
 
 -- 6. Selezionare tutti gli eventi con nome, data di inizio, ora di inizio, ora di fine e durata totale
     SELECT name, DATE(start) AS start_date, TIME(start) AS start_time, TIME(DATE_ADD(start, INTERVAL TIME_TO_SEC(duration) SECOND)) AS end_time, duration FROM events;
+
+-- 7. Selezionare tutti gli eventi aggiunti da "Fabiano Lombardo" (id: 1202)
+    SELECT * FROM events WHERE user_id = 1202;
+
+
